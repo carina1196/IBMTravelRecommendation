@@ -2,6 +2,7 @@
 const searchBtn = document.getElementById("searchBtn");
 const resetBtn = document.getElementById("resetBtn");
 const result = document.getElementById("searchResult");
+
 var searchOutput = [];
 var temples = [];
 var beaches = [];
@@ -14,25 +15,22 @@ fetch("./travel_recommendation_api.json")
     return response.json();
   })
   .then((data) => {
-    console.log("Data fetched successfully");
     temples = data["temples"];
     beaches = data["beaches"];
     countriesData = data["countries"];
 
     countriesData.forEach((country) => {
-      console.log(country);
       listOfCountries.push(country["name"].toLowerCase());
     });
-    console.log(listOfCountries);
   })
   .catch((error) => {
     console.error("An error occured:", error);
+    result.innerHTML = `<p class="alert alert-warning">An error has occurred</p>`;
   });
 
 function keywordSearch() {
   searchOutput = [];
   const search = document.getElementById("searchInput").value;
-  console.log(search);
 
   if (["beach", "beaches", "BEACH", "BEACHES"].includes(search)) {
     searchOutput = beaches;
@@ -66,4 +64,10 @@ function search() {
   });
 }
 
+function clear() {
+  result.innerHTML = "";
+  document.getElementById("searchInput").value = "";
+}
+
 searchBtn.addEventListener("click", search);
+resetBtn.addEventListener("click", clear);

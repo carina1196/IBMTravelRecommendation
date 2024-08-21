@@ -54,10 +54,10 @@
           placeholder="Enter a destination or keyword"
           id="searchInput"
         />
-        <button class="searchBarBtn" type="button" id="searchBtn">
+        <button class="btn" type="button" id="searchBtn" onclick="search()">
           Search
         </button>
-        <button class="searchBarBtn" type="reset" id="resetBtn">
+        <button class="btn" type="reset" id="resetBtn" onclick="clear()">
           Clear
         </button>
       </form>
@@ -65,7 +65,7 @@
     <div class="row">
       <div class="col-auto">
         <div class="vl"></div>
-        <nav class="socialMediaLinks">
+        <nav class="socialMediaLinks mt-auto mb-0">
           <ul class="navbar-nav">
             <li id="twitter" class="mb-3">
               <a
@@ -103,19 +103,23 @@
         </nav>
       </div>
 
-      <main class="col-6">
-        <h1>EXPLORE YOUR DREAM DESTINATION</h1>
-        <p>
+      <main class="col-6 my-auto">
+        <h1 class="pageTitle d-inline justify-content-center">
+          EXPLORE YOUR DREAM DESTINATION
+        </h1>
+        <p class="pageDescription">
           It encourages exploration of unfamiliar territories, embracing diverse
           cultures and landscapes, while pursuing the desired destination that
           captivates the heart and ignites a sense of wonder
         </p>
-        <button type="button" id="bookNow">BOOK NOW</button>
+        <button class="btn" type="button" id="bookNow">
+          BOOK NOW
+        </button>
       </main>
       <div class="col-5" id="searchResult"></div>
     </div>
 
-    <footer>
+    <footer class="footer fixed-bottom">
       <a
         href="https://www.freepik.com/free-photo/cityscape-singapore-city-skyline_4011577.htm#fromView=search&page=1&position=2&uuid=312106a9-f860-4d32-8db6-24689dfbcfa8"
         >Image by lifeforstock on Freepik</a

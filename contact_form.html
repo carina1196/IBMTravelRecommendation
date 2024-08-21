@@ -90,20 +90,17 @@
         </nav>
       </div>
 
-      <main class="col-4 py-5">
-        <div id="description" class="d-inline justify-content-center">
-          <h1
-            id="descriptionTitle"
-            style="font-weight: bolder; font-size: 60px; color: white;"
-          >
+      <main class="col-4 d-inline justify-content-center my-auto">
+        <div id="description">
+          <h1 class="pageTitle">
             CONTACT US
           </h1>
-          <p id="descriptionTitle" style="color: white;">
+          <p class="pageDescription">
             Get in touch with us today!
           </p>
         </div>
       </main>
-      <form class="col-6 d-inline">
+      <form class="col-6 d-inline my-auto">
         <div id="contactForm">
           <div id="nameInput">
             <label for="name" class="form-label">Name</label>
@@ -123,6 +120,7 @@
               id="formSubmit"
               class="btn btn-primary"
               type="button"
+              onclick="submit()"
             >
               Submit
             </button>
@@ -131,7 +129,7 @@
       </form>
     </div>
 
-    <footer>
+    <footer class="footer fixed-bottom">
       <a
         href="https://www.freepik.com/free-photo/cityscape-singapore-city-skyline_4011577.htm#fromView=search&page=1&position=2&uuid=312106a9-f860-4d32-8db6-24689dfbcfa8"
         >Image by lifeforstock on Freepik</a
@@ -142,6 +140,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="travel_recommendation.js"></script>
+    <script src="contact_form.js"></script>
   </body>
 </html>

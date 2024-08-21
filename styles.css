@@ -35,7 +35,7 @@ body {
   color: #008080;
 }
 
-.searchBarBtn {
+.btn {
   background-color: teal;
   color: white;
   border-radius: 10px;
@@ -51,11 +51,35 @@ body {
 }
 
 .vl {
-  border-left: 4px solid white;
+  border-left: 2px solid white;
   height: 20em;
   position: relative;
   left: 50%;
   margin-left: -3px;
   margin-bottom: 5rem;
   top: 20px;
+}
+
+.pageTitle {
+  font-weight: bolder;
+  font-size: 60px;
+  color: white;
+}
+
+.pageDescription {
+  color: white;
+}
+
+#team {
+  color: white;
+}
+
+.teamPosition {
+  display: inline-flex;
+  background-color: rgb(16, 26, 158);
+  text-align: center;
+  align-content: center;
+  border: 1px solid white;
+  padding: 5px 2rem;
+  border-radius: 15px;
 }
